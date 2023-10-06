@@ -1,4 +1,4 @@
-public class extra {
+public class SqaureRoot {
     public static void main(String[] args) {
         int n = 25; // Your input number
         int result = sqrt(n);
