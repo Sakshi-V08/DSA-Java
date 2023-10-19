@@ -2,7 +2,7 @@ public class Buy_and_Sell_Stocks {
     public static int buyAndSellStocks(int prices[]) {
         int buyPrice = Integer.MAX_VALUE;
         int maxProfit = 0;
-        for (int i = 0; i < prices.length; i++) {
+        for (int i = 0; i < prices.length; i++) {   //O(n)
             if (buyPrice < prices[i]) { // profit
                 int profit = prices[i] - buyPrice;
                 maxProfit = Math.max(maxProfit, profit);

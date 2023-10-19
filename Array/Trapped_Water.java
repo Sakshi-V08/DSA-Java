@@ -20,7 +20,7 @@ public class Trapped_Water {
         for (int i = 0; i < n; i++) {
             // waterLevel = min(leftmax bound, rightmax bpund)
             int waterLevel = Math.min(leftMax[i], rightMax[i]);
-            // trapped water =waterLevel -height
+            // trapped water = waterLevel -height
             trappedWater += waterLevel - height[i];
         }
         return trappedWater;
