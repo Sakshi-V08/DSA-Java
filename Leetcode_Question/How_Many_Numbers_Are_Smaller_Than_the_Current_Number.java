@@ -9,9 +9,9 @@ public class How_Many_Numbers_Are_Smaller_Than_the_Current_Number {
                 if (curr > arr[j]) {
                     count++;
                 }
-            }
+           }
             arr1[i] = count;
-        }
+              }
         for (int i = 0; i < arr1.length; i++) {
             System.out.print(arr1[i] + " ");
         }
@@ -24,3 +24,18 @@ public class How_Many_Numbers_Are_Smaller_Than_the_Current_Number {
     }
 
 }
+// class Solution {
+//     public int[] smallerNumbersThanCurrent(int[] nums) {
+//         int arr[] = new int[nums.length];
+//         int count;
+//         for(int i=0;i<nums.length;i++){
+//             count = 0;
+//             for(int j=0;j<nums.length;j++){
+//                 if(j==i) continue;
+//                 if(nums[i]>nums[j]) count++;
+//             }
+//             arr[i] = count;
+//         }
+//         return arr;
+//     }
+// }
