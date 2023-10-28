@@ -22,3 +22,9 @@ public class Subarray_sum_array_equal_k {
         subArray(nums, k);
     }
 }
+
+
+
+
+
+
