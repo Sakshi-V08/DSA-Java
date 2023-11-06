@@ -78,6 +78,5 @@ public class Sudoku {
                 }else{
                     System.out.println("Solution does not exist");
                 }
-
     }
 }
