@@ -6,20 +6,21 @@ public class TwoDArray {
     public static void main(String args[]){
         ArrayList<ArrayList<Integer>> mainList=new ArrayList<>();
         ArrayList<Integer> list =new ArrayList<>();
-        list.add(1); list.add(2);
+        list.add(1); list.add(2);   //adding the element in the list in mainlist
         mainList.add(list);
 
-        ArrayList<Integer> list2 = new ArrayList<>();
+        ArrayList<Integer> list2 = new ArrayList<>();   //another list2 
         list2.add(3); list2.add(4);
         mainList.add(list2);
 
         for(int i=0;i<mainList.size();i++){
-            ArrayList<Integer> currList = mainList.get(i);  //whole list stored
+            ArrayList<Integer> currList = mainList.get(i);  //whole list stored in currentList
             for(int j=0;j<currList.size();j++){
-                System.out.println(currList.get(j)+" ");
+                System.out.print(currList.get(j)+" ");
             }
             System.out.println();
         }
+        System.out.println(mainList);
     }
     
 }
