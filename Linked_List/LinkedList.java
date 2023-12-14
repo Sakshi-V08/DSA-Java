@@ -140,7 +140,7 @@ public class LinkedList {
     }
 
     // Method for searching the element by recursion
-    public int helper(Node head, int key) {    //O(n)
+    public int helper(Node head, int key) { // O(n)
         if (head == null) {
             return -1; // it return index of the found element
         }
@@ -158,19 +158,92 @@ public class LinkedList {
         return helper(head, key);
     }
 
-    //Method for reversing the list  O(n) ( 3 variable 4 steps very important point please memorized it)
-    public void reverse(){
-        Node prev= null;
-        Node curr =tail= head;
+    // Method for reversing the list O(n) ( 3 variable 4 steps very important point
+    // please memorized it)
+    public void reverse() {
+        Node prev = null;
+        Node curr = tail = head;
         Node next;
 
-        while (curr != null){
-           next = curr.next;
-           curr.next=prev;
-           prev= curr;
-           curr = next;   
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
         }
-        head=prev;
+        head = prev;
+    }
+
+    // Method to find and remove nth node from end
+    public void deletNthfromEnd(int n) {
+        // calculate size
+        int sz = 0;
+        Node temp = head;
+        while (temp != null) {
+            temp = temp.next;
+            sz++;
+        }
+        if (n == sz) {
+            head = head.next; // removeFirst
+            return;
+        }
+
+        // sz-n
+        int i = 1;
+        int iToFind = sz - n;
+        Node prev = head; // previous
+        while (i < iToFind) {
+            prev = prev.next;
+            i++;
+        }
+
+        prev.next = prev.next.next;
+        return;
+    }
+    
+    //Method to find Palindrome of list
+    // Slow-fast approach
+    public Node findMid(Node head){  //helper
+        Node slow = head;
+        Node fast= head;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;  //+1
+            fast= fast.next.next; //+2
+        }
+        return slow;  //slow is my midNode
+    }
+
+    public boolean checkPalindrome(){
+        if(head == null || head.next == null){
+            return true;
+        }
+        //step1 - find mid
+        Node midNode = findMid(head);
+
+        //step2- reverse 2nd half
+        Node prev = null;
+        Node curr= midNode;
+        Node next;
+        while(curr != null){
+            next = curr.next;
+            curr.next= prev;
+            prev= curr;
+            curr= next;
+        }
+
+        Node right=prev;//right half head 
+        Node left= head;
+
+        //step3- check left half and right half
+        while(right != null){
+            if(left.data != right.data){
+                return false;
+            }
+            left= left.next;
+            right= right.next;
+        }
+        return true;
     }
 
     public static void main(String args[]) {
@@ -192,12 +265,15 @@ public class LinkedList {
 
         System.out.println("Print found element's index by iteration: " + l1.itrSearch(5));
         System.out.println("Print found element's index by recursion: " + l1.recSearch(5));
-        
+
         System.out.println("Print reverse of the list: ");
         l1.reverse();
         l1.print();
+        l1.deletNthfromEnd(3);
+        l1.print();
+
+        System.out.println(l1.checkPalindrome());
+        
     }
-
-
 
 }
