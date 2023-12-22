@@ -33,3 +33,20 @@ public class Max_subarray_sum {
     }
 
 }
+//Takes less time complexity
+// class Solution {
+//     public int maxSubArray(int[] nums) {
+//         int currSum = nums[0];
+//         int maxSum = nums[0];
+
+//         for (int i = 1; i < nums.length; i++) {
+//             // Choose the maximum between the current element and the sum so far plus the current element
+//             currSum = Math.max(nums[i], currSum + nums[i]);
+            
+//             // Update the maximum subarray sum
+//             maxSum = Math.max(maxSum, currSum);
+//         }
+
+//         return maxSum;
+//     }
+// }
