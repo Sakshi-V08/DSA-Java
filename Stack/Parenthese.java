@@ -39,3 +39,35 @@ public class Parenthese {
         System.out.println(isValid(str));
     }
 }
+
+
+// import java.util.Stack;
+
+// class Solution {
+//     public int longestValidParentheses(String s) {
+//         Stack<Integer> stack = new Stack<>();
+//         int maxLength = 0;
+//         stack.push(-1); // Initialize the stack with -1 to handle edge cases
+
+//         for (int i = 0; i < s.length(); i++) {
+//             char ch = s.charAt(i);
+
+//             if (ch == '(') {
+//                 stack.push(i); // Push the index of '(' onto the stack
+//             } else {
+//                 // Closing parenthesis
+//                 stack.pop(); // Pop the top element as '(' is matched
+
+//                 if (stack.isEmpty()) {
+//                     // If stack is empty, push the current index onto the stack to represent the starting point
+//                     stack.push(i);
+//                 } else {
+//                     // Calculate the length of the current valid parentheses substring
+//                     maxLength = Math.max(maxLength, i - stack.peek());
+//                 }
+//             }
+//         }
+
+//         return maxLength;
+//     }
+// }
