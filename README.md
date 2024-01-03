@@ -46,6 +46,8 @@ Data Structures and Algorithms (DSA) form the backbone of computer science and s
    - Adjacency List
    - Depth-First Search (DFS)
    - Breadth-First Search (BFS)
+   - Bipartite Graph
+   - Topological Sorting
 ## Algorithms
 1. Sorting
    - Bubble Sort
@@ -65,7 +67,17 @@ Data Structures and Algorithms (DSA) form the backbone of computer science and s
 5. Graph Algorithms
    - Dijkstra's Algorithm
    - Kruskal's Algorithm
+   - Bellman Ford Algorithm
+   - Tarjan's Algorithm
+   - Flood Fill Algorithm
+   - Floyd Warshall Algorithm
    - Prim's Algorithm
 6. Dynamic Programming
    - Fibonacci Sequence
+   - Climbing Staris
+   - Types of Knapsack Problems [ Recursion, Memorization, Tabulation ]
+   - Target Sum Subset
+   - Coin Change
+   - Rod Cutting
+   - Edit Distance
    - Longest Common Subsequence (LCS)
