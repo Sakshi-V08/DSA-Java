@@ -10,7 +10,7 @@ This repository contains implementations of various data structures and algorith
 ## Introduction
 Data Structures and Algorithms (DSA) form the backbone of computer science and software development. They are fundamental concepts that empower developers to solve complex problems and optimize the performance of their applications. This repository focuses on implementing DSA using the Java programming language.
 ## Basics
--Flowcharts 
+- Flowcharts 
 - Backtracking
 - Variables & Data Types in Java
 - Time & Space Complexity 
