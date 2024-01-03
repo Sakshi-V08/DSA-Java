@@ -3,11 +3,28 @@
 This repository contains implementations of various data structures and algorithms in Java. Understanding data structures and algorithms is essential for writing efficient and scalable software. This collection serves as a resource for developers looking to enhance their knowledge and skills in this crucial area.
 ## Table of Content
 - Introduction
+- Basics
 - Data Structures
 - Algorithms
 - Some Leetcode Solutions
 ## Introduction
 Data Structures and Algorithms (DSA) form the backbone of computer science and software development. They are fundamental concepts that empower developers to solve complex problems and optimize the performance of their applications. This repository focuses on implementing DSA using the Java programming language.
+## Basics
+-Flowcharts 
+- Backtracking
+- Variables & Data Types in Java
+- Time & Space Complexity 
+- Operators
+- Arrays / 2D / ArrayLists
+- if-else Statements 
+- Patterns
+- Functions & Methods
+- Strings 
+- Bit Manipulation
+- OOPs
+- Recursion
+- Divide & Conquer
+- Segment Trees
 ## Data Structures
 1. Linked List
    - Singly Linked List
@@ -39,10 +56,16 @@ Data Structures and Algorithms (DSA) form the backbone of computer science and s
 2. Searching
    - Linear Search
    - Binary Search
-3. Graph Algorithms
+3. Greedy Algorithms
+   - Activity Selection
+   - Fractional Knapsack
+   - Minimum Sum absolute difference pairs
+   - Job Sequencing problem
+   - Chocola problem
+5. Graph Algorithms
    - Dijkstra's Algorithm
    - Kruskal's Algorithm
    - Prim's Algorithm
-4. Dynamic Programming
+6. Dynamic Programming
    - Fibonacci Sequence
    - Longest Common Subsequence (LCS)
