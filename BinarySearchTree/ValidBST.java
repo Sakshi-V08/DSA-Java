@@ -47,15 +47,24 @@ public static boolean isValidBST(Node root,Node min,Node max){
     return isValidBST(root.left, min, root) && isValidBST(root.right, root, max);
 }
     public static void main(String args[]) {
-        int values[] = { 8, 5,4, 3, 6, 10, 11, 14 }; //{1,1,1} not valid condition invalid
-        Node root = null;
+        // int values[] = { 8, 5,4, 3, 6, 10, 11,15,17, 14 }; //{1,1,1} not valid condition invalid
+        // Node root = null;
 
-        for (int i = 0; i < values.length; i++) {
-            root = insert(root, values[i]);
-        }
+        // for (int i = 0; i < values.length; i++) {
+        //     root = insert(root, values[i]);
+        // }
 
-        inorder(root);
-        System.out.println();
+        // inorder(root);
+        // System.out.println();
+        Node root = new Node(50);
+        root.left =new Node(30);
+        root.left.left= new Node (5);
+        root.left.right= new Node(20);
+        root.right= new Node(60);
+        root.right.left= new Node(45);
+        root.right.right=new Node(75);
+        root.right.right.right= new Node(80);
+        root.right.right.left = new Node(65);
 
         if(isValidBST(root, null, null))
         {
