@@ -16,7 +16,7 @@ public class PascalTriangle {
 
             for (int j = 0; j <= i; j++) {
                 System.out.print(" " + p + " ");
-                p = p * (i - j) / (j + 1);
+                p = p * (i - j) / (j+1);
             }
 
             System.out.println();
