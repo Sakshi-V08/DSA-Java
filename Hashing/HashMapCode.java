@@ -46,7 +46,7 @@ public class HashMapCode {
             }
             return -1;
         }
-
+        @SuppressWarnings("unchecked")
         private void rehash() {
             LinkedList<Node> oldBuck[] = buckets; // store bucket data
             buckets = new LinkedList[N * 2]; // complety empty
@@ -66,7 +66,7 @@ public class HashMapCode {
             }
         }
 
-        public void put(K key, V value) { // O(1)
+        public void put(K key, V value) { // O(lambda) -> O(1)
             int bi = hashFunction(key);
             int di = SearchInLL(key, bi); // valid when it is exist, if not exist it give -1
 
@@ -85,19 +85,55 @@ public class HashMapCode {
         }
 
         public boolean containKey(K key) { // O(1)
-            return false;
+            int bi = hashFunction(key);
+            int di = SearchInLL(key, bi);
+
+            if (di != -1) { // valid
+                return true;
+            } else {
+                return false;
+            }
         }
 
         public V remove(K key) { // O(1)
-            return null;
+            int bi = hashFunction(key);
+            int di = SearchInLL(key, bi);
+
+            if (di != -1) {
+                Node node = buckets[bi].remove(di);
+                n--;
+                return node.value;
+            } else {
+                return null;
+            }
         }
 
         public V get(K key) { // O(1)
-            return null;
+            int bi = hashFunction(key); // give backet idx
+            int di = SearchInLL(key, bi); // give data idx
+
+            if (di != -1) {
+                Node node = buckets[bi].get(di);
+                return node.value;
+            } else {
+                return null;
+            }
         }
 
         public ArrayList<K> keySet() {
-            return null;
+            ArrayList<K> keys = new ArrayList<>();
+
+            for (int i = 0; i < buckets.length; i++) {
+                LinkedList<Node> ll = buckets[i]; // store linkedlist of particular bucket
+                for (Node node : ll) {
+                    keys.add(node.key);
+                }
+            }
+            return keys;
+        }
+
+        public boolean isEmpty() {
+            return n == 0;
         }
     }
 
@@ -107,5 +143,12 @@ public class HashMapCode {
         hm.put("China", 150);
         hm.put("US", 50);
         hm.put("Nepal", 5);
+         
+        ArrayList<String> keys = hm.keySet();
+        for (String key : keys) {
+             System.out.println(key);
+        }
+
+        System.out.println(hm.get("China")); //print value
     }
 }
