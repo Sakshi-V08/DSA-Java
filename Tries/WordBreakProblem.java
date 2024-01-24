@@ -1,6 +1,6 @@
 package Tries;
 
-public class CreatingTries {
+public class WordBreakProblem {
     static class Node {
         Node children[] = new Node[26];
         boolean eow = false;
@@ -12,7 +12,8 @@ public class CreatingTries {
         }
     }
 
-    public static Node root = new Node(); // default it empty because it store only the information about its children
+    public static Node root = new Node(); // default it empty because it store only the information about its
+                                          // children
 
     public static void insert(String word) { // O(L)
         Node curr = root;
@@ -38,15 +39,31 @@ public class CreatingTries {
         return curr.eow == true;
     }
 
-    public static void main(String args[]) {
-        String words[] = { "the", "a", "there", "their", "any", "thee" };
-        String arr[]={"i","like","sam","samsung","mobile","ice"};
-        for (int i = 0; i < words.length; i++) {
-            insert(words[i]);
+    public static boolean wordBreak(String key) {
+
+        if (key.length() == 0) {
+            return true;
         }
 
-        System.out.println(search("thee"));
-        System.out.println(search("any"));
+        for (int i = 1; i <= key.length(); i++) {
+            // substring(beg idx, last idx)
+            if (search(key.substring(0, i)) &&
+                    wordBreak(key.substring(i))) { // from i beginning idx
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void main(String args[]) {
+
+        String arr[] = { "i", "like", "sam", "samsung", "mobile", "ice" };
+        for (int i = 0; i < arr.length; i++) {
+            insert(arr[i]);
+        }
+
+        String key = "ilikesamsung";
+        System.out.println(wordBreak(key));
     }
 
 }
