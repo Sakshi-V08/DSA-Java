@@ -1,6 +1,6 @@
 public class Diagonal_Sum {
     // n=m diagonal Sum
-    public static int diagonalSum(int matrix[][]) { // O(n62)
+    public static int diagonalSum(int matrix[][]) { // O(n2)
         int sum = 0;
         // n*m size
         // Summation of primary diagonal
@@ -16,10 +16,10 @@ public class Diagonal_Sum {
         // }
 
         // }
-        for (int i = 0; i < matrix.length; i++) {     //O(n)
-            // pd
+        for (int i = 0; i < matrix.length; i++) { // O(n)
+            // pd - primary diagonal
             sum += matrix[i][i];
-            // sd
+            // sd - secondary diagonal
             if (i != matrix.length - 1 - i) {
                 sum += matrix[i][matrix.length - i - 1];
             }

@@ -22,7 +22,7 @@ public class Search_in_Sorted_Matrix {
         int row = matrix.length-1, col = 0;
         while (row >=0 && col < matrix.length) {
             if (matrix[row][col] == key) {
-                System.out.print("Found key at (" + row + "," + col + ")");
+                System.out.print("Found key "+key+" at (" + row + "," + col + ")");
                 return true;
             } else if (key > matrix[row][col]) {
                 col++;
