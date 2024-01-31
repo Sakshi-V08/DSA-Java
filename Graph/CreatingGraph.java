@@ -16,10 +16,11 @@ public class CreatingGraph {
     }
 
     public static void main(String args[]) {
-        int v = 5;
-        ArrayList<Edge>[] graph = new ArrayList[v];
+        int V = 5;
+        @SuppressWarnings("unchecked")
+        ArrayList<Edge>[] graph = new ArrayList[V];
 
-        for (int i = 0; i < v; i++) {
+        for (int i = 0; i < V; i++) {
             graph[i] = new ArrayList<>();
         }
 
@@ -45,8 +46,9 @@ public class CreatingGraph {
 
         // Print neighbors of vertex 2
         System.out.println("Neighbours of vertex 2:");
-        for (Edge e : graph[2]) {
-            System.out.println("Destination: " + e.dest + ", Weight: " + e.wt);
+        for (int i=0;i<graph[2].size();i++) {
+            Edge e = graph[2].get(i);
+            System.out.println( e.dest);
         }
     }
 }
