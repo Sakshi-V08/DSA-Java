@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TopologicalSorting",
+            "request": "launch",
+            "mainClass": "Graph.TopologicalSorting",
+            "projectName": "Java_f257913b"
+        },
+        {
+            "type": "java",
             "name": "LongestPalindromeSubstring",
             "request": "launch",
             "mainClass": "LongestPalindromeSubstring",
