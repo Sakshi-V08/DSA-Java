@@ -6,7 +6,7 @@ public class FractionalKnapsack {
     public static void main(String args[]) {
         int val[] = { 60, 100, 120 };
         int weight[] = { 10, 20, 30 };
-        int w = 50;
+        int w = 70;
 
         double ratio[][] = new double[val.length][2];
         // 0th col => idx ; 1st col=> ratio
@@ -17,6 +17,8 @@ public class FractionalKnapsack {
         }
         // ascending order  4,5,6
         Arrays.sort(ratio, Comparator.comparingDouble(o -> o[1]));
+        // descending order -  Arrays.sort(twoDim, Comparator.comparingInt(a -> a[0]).reversed());
+
 
         int capacity = w;
         int finalVal=0;
