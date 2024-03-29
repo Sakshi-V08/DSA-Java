@@ -31,41 +31,44 @@ public class CountUniqueSubstring {
             curr = curr.children[idx];
         }
     }
-    public static boolean search(String key){
-        int level =0;
-        int len=key.length();
-        int idx=0;
 
-        Node curr= root;
-        for(;level<len;level++){
-            idx = key.charAt(level)-'a';
-            if(curr.children[idx] == null){
+    public static boolean search(String key) { //O(L)
+        int level = 0;
+        int len = key.length();
+        int idx = 0;
+
+        Node curr = root;
+        for (; level < len; level++) {
+            idx = key.charAt(level) - 'a';
+            if (curr.children[idx] == null) {
                 return false;
             }
-            curr= curr.children[idx];
+            curr = curr.children[idx];
         }
         return curr.eow == true;
 
     }
 
-    public static int countNodes(Node root){
-        if(root == null){
+    public static int countNodes(Node root) {
+        //BC
+        if (root == null) {
             return 0;
         }
 
         int count = 0;
-        for(int i= 0;i<26;i++){
-            if(root.children[i] != null){
-                count+= countNodes(root.children[i]);
+        for (int i = 0; i < 26; i++) {
+            if (root.children[i] != null) {
+                count += countNodes(root.children[i]);
             }
         }
-        return count+1;
+        return count + 1;
     }
-    public static void main(String args[]){
-        String str ="apple";  //ans =10
 
-        //suffix -> insert into trie
-        for(int i=0;i<str.length();i++){
+    public static void main(String args[]) {
+        String str = "apple"; // ans =10
+
+        // suffix -> insert into trie
+        for (int i = 0; i < str.length(); i++) {
             String suffix = str.substring(i);
             insert(suffix);
         }
