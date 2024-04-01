@@ -41,14 +41,15 @@ public class WordBreakProblem {
 
     public static boolean wordBreak(String key) {  //O(L)
 
+        //BC
         if (key.length() == 0) {
             return true;
         }
 
         for (int i = 1; i <= key.length(); i++) {
-            // substring(beg idx, last idx)
+            // substring(beg idx, last idx) partition
             if (search(key.substring(0, i)) &&
-                    wordBreak(key.substring(i))) { // from i beginning idx
+                    wordBreak(key.substring(i))) { // from i beginning idx recursive call for other part
                 return true;
             }
         }

@@ -34,6 +34,7 @@ public class PrefixProblem {
     }
 
     public static void findPrefix(Node root, String ans) {  //O(L) levels of tries == longest word and it is print bydefault in alphabetical order
+        //BC
         if (root == null) {
             return;
         }
@@ -41,6 +42,7 @@ public class PrefixProblem {
             System.out.println(ans);
             return;
         }
+        //root.children.length = 26
         for (int i = 0; i < root.children.length; i++) {
             if (root.children[i] != null) {
                 findPrefix(root.children[i], ans + (char) (i + 'a'));

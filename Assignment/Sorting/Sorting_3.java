@@ -1,3 +1,4 @@
+package Sorting;
 public class Sorting_3 {
     // Insertion Sorting
     public static void insertionSort(int arr[]) { // Assume first element is already sorted in array so loop start from

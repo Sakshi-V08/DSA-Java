@@ -1,5 +1,6 @@
 package Tries;
 
+// is given prefix is lies in the array or not print boolean value "true 0r false"
 public class StartsWithProblem {
     static class Node {
         Node[] childern = new Node[26];
@@ -30,22 +31,6 @@ public class StartsWithProblem {
         curr.eow = true;
     }
 
-    public static boolean search(String key) { // O(n)
-        int level = 0;
-        int len = key.length();
-        int idx = 0;
-
-        Node curr = root;
-        for (; level < len; level++) {
-            idx = key.charAt(level) - 'a';
-            if (curr.childern[idx] == null) {
-                return false;
-            }
-            curr = curr.childern[idx];
-        }
-        return curr.eow = true;
-    }
-
     public static boolean startsWith(String prefix) {
         Node curr = root;
         for (int i = 0; i < prefix.length(); i++) {
@@ -67,8 +52,8 @@ public class StartsWithProblem {
             insert(words[i]);
         }
 
-        System.out.println(startsWith(prefix2)); // it give false
-        System.out.println(startsWith(prefix1)); // it give true
+        System.out.println("Prefix1 : " + startsWith(prefix2)); // it give false
+        System.out.println("Prefix2 : " + startsWith(prefix1)); // it give true
 
     }
 }

@@ -1,3 +1,4 @@
+package Array;
 //Buy and Sell Stocks
 
 public class Array_3 {

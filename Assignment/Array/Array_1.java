@@ -1,3 +1,4 @@
+package Array;
 // One or more than one times appear
 
 public class Array_1 {

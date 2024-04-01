@@ -46,12 +46,15 @@ public class LongestwordwithallPrefix {
     }
     public static String ans ="";
     public static void longestWord(Node root, StringBuilder temp){
+        //BC
         if(root == null){
             return;
         }
+        //for(int i=25;i>=0;i--)   for find larger value
 
-        for(int i=0;i<26;i++){ //lexicography 
-            if(root.children[i] != null && root.children[i].eow == true){
+        for(int i=0;i<26;i++){ //lexicography  a generalization of the alphabetical order of the dictionaries to sequences of ordered symbols 
+            if(root.children[i] != null && root.children[i].eow == true)
+            {
                 char ch =(char)(i+'a');
                 temp.append(ch);
                 if(temp.length()>ans.length()){

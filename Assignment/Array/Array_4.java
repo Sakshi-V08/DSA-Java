@@ -1,3 +1,4 @@
+package Array;
 // Trapped water
 public class Array_4 {
     public static int trappedWater(int height[]) {
