@@ -158,8 +158,7 @@ public class LinkedList {
         return helper(head, key);
     }
 
-    // Method for reversing the list O(n) ( 3 variable 4 steps very important point
-    // please memorized it)
+    // Method for reversing the list O(n) ( 3 variable 4 steps very important point please memorized it)
     public void reverse() {
         Node prev = null;
         Node curr = tail = head;
@@ -200,48 +199,48 @@ public class LinkedList {
         prev.next = prev.next.next;
         return;
     }
-    
-    //Method to find Palindrome of list
-    // Slow-fast approach
-    public Node findMid(Node head){  //helper
-        Node slow = head;
-        Node fast= head;
 
-        while(fast != null && fast.next != null){
-            slow = slow.next;  //+1
-            fast= fast.next.next; //+2
+    // Method to find Palindrome of list
+    // Slow-fast approach
+    public Node findMid(Node head) { // helper
+        Node slow = head;  //O(n/2)
+        Node fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next; // +1 step
+            fast = fast.next.next; // +2 steps
         }
-        return slow;  //slow is my midNode
+        return slow; // slow is my midNode
     }
 
-    public boolean checkPalindrome(){
-        if(head == null || head.next == null){
+    public boolean checkPalindrome() {
+        if (head == null || head.next == null) {
             return true;
         }
-        //step1 - find mid
+        // step1 - find mid
         Node midNode = findMid(head);
 
-        //step2- reverse 2nd half
+        // step2- reverse 2nd half
         Node prev = null;
-        Node curr= midNode;
+        Node curr = midNode;
         Node next;
-        while(curr != null){
+        while (curr != null) {
             next = curr.next;
-            curr.next= prev;
-            prev= curr;
-            curr= next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
         }
 
-        Node right=prev;//right half head 
-        Node left= head;
+        Node right = prev;// right half head
+        Node left = head;
 
-        //step3- check left half and right half
-        while(right != null){
-            if(left.data != right.data){
+        // step3- check left half and right half
+        while (right != null) {
+            if (left.data != right.data) {
                 return false;
             }
-            left= left.next;
-            right= right.next;
+            left = left.next;
+            right = right.next;
         }
         return true;
     }
@@ -273,7 +272,7 @@ public class LinkedList {
         l1.print();
 
         System.out.println(l1.checkPalindrome());
-        
+
     }
 
 }

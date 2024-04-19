@@ -16,7 +16,7 @@ public class LinkedList2 {
 
     // Methods to add first on index first O(n)
     public void addFirst(int data) {
-        // step 1 =create new node
+        // step 1 = create new node
         Node newNode = new Node(data);
         if (head == null) {
             head = tail = newNode;
@@ -26,7 +26,7 @@ public class LinkedList2 {
         // step 2-> newNode next = head
         newNode.next = head; // linking step
 
-        // step 3-> head=newNode
+        // step 3-> head = newNode
         head = newNode; // point to newNode head
 
     }
@@ -79,12 +79,12 @@ public class LinkedList2 {
         }
 
         //find meeting point
-        slow =head;
+        slow = head;
         Node prev = null;  //last node
-        while (slow!= fast){
+        while (slow != fast){
             prev= fast;
-            slow= slow.next;
-            fast= fast.next;
+            slow= slow.next; //+1
+            fast= fast.next; //+1
         }
 
         //remove cycle -> last.next = null

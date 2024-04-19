@@ -82,7 +82,7 @@ public class LinkedList3 {
             head2 = head2.next;
             temp = temp.next;
         }
-        return mergedLL.next;
+        return mergedLL.next;  //mergeLL = -1 which is delete that is mergedLL.next
     }
 
     public Node mergeSort(Node head) {

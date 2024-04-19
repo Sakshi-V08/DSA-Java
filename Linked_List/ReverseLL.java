@@ -40,7 +40,7 @@ public class ReverseLL {
         }
         System.out.println("null");
     }
-
+// 3 variable , 4 steps
     public void reverse() {
         Node curr = head;
         Node prev = null;
