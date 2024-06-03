@@ -39,11 +39,13 @@ public class Question3 {
         s.push(1);
         s.push(2);
         s.push(3);
+        
         System.out.println("Reverse the stack:");
+        printStack(s);
         //3,2,1
         reverseStack(s);
         //1,2,3
-        printStack(s);
+       printStack(s);
     }
 
 }

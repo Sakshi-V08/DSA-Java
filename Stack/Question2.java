@@ -3,7 +3,7 @@ import java.util.*;
 public class Question2 {
     //Reverse a String using a Stack
     public static String reverseString(String str){
-        Stack<Character> s=new Stack<>();
+        Stack<Character> s = new Stack<>();
         int idx=0;
         while(idx < str.length()){
             s.push(str.charAt(idx));

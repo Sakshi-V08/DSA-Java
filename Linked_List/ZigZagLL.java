@@ -50,12 +50,13 @@ public class ZigZagLL {
         }
         Node mid= slow;
 
-        //reverse 2nd half
+        //reverse 2nd half 
         Node curr = mid.next;
         mid.next= null;
         Node prev= null;
         Node next;
 
+        // 3 variable 4 steps
         while(curr != null){
             next = curr.next;
             curr.next = prev;
