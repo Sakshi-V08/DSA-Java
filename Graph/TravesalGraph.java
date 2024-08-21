@@ -69,6 +69,6 @@ public class TravesalGraph {
         @SuppressWarnings("unchecked")
         ArrayList<Edge> graph[] = new ArrayList[v];
         createGraph(graph);
-         bfs(graph);
+        bfs(graph);
     }
 }

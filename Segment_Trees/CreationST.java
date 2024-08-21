@@ -7,15 +7,16 @@ public class CreationST {
         tree = new int[4 * n];
 
     }
-
+// stri = segment tree idx
     public static int buildST(int arr[], int sti, int start, int end) {
+        //base cases
         if (start == end) {
             tree[sti] = arr[start];
-            return arr[start];
+            return arr[start]; //then goes on rightbst after completing first round storing 1 in the tree
         }
         int mid = (start + end) / 2;
-        buildST(arr, 2 * sti + 1, start, mid); // leftsubtree
-        buildST(arr, 2 * sti + 2, mid + 1, end); // right subarray
+        buildST(arr, 2 * sti + 1, start, mid); // leftsubtree - 2*i+1
+        buildST(arr, 2 * sti + 2, mid + 1, end); // right subarray - 2*i+2
 
         tree[sti] = tree[2 * sti + 1] + tree[2 * sti + 2];
         return tree[sti];
