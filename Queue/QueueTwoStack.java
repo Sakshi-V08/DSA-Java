@@ -9,7 +9,7 @@ public class QueueTwoStack {
             return s1.isEmpty();
         }
 
-        //add -O(n)
+        //add - O(n)
         public static void add(int data){
             while(!s1.isEmpty()){   //O(n)
                 s2.push(s1.pop());

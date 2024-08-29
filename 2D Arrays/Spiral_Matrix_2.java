@@ -42,7 +42,7 @@ public class Spiral_Matrix_2 {
     
         public static void main(String[] args) {
             Spiral_Matrix_2 solution = new Spiral_Matrix_2();
-            int n = 3; // Change the value of n as needed
+            int n = 8; // Change the value of n as needed
     
             int[][] result = solution.generateMatrix(n);
     

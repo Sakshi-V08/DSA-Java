@@ -1,5 +1,5 @@
 package Recursion;
-
+//DividenConquer Method
 public class DividenConquer {
     public static void printArr(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
@@ -9,6 +9,7 @@ public class DividenConquer {
     }
 
     public static void mergeSort(int arr[], int si, int ei) {
+        //base case
         if(si>=ei){
             return;
         }
@@ -20,7 +21,7 @@ public class DividenConquer {
 
     }
     public static void merge(int arr[],int si,int mid,int ei){
-        int temp[]=new int[ei-si+1];
+        int temp[] = new int[ei-si+1];
         int i=si;//iterator for left part
         int j=mid+1; //iterator for right part
         int k=0; //iterator for temp arr

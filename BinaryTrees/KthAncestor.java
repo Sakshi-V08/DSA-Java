@@ -1,7 +1,8 @@
 package BinaryTrees;
 
 public class KthAncestor {
-    static class Node {
+    static class Node 
+    {
         int data;
         Node left;
         Node right;

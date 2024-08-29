@@ -1,4 +1,5 @@
 public class Kadane {
+    // finding maximum subarray sum 
     public static void kadanes(int numbers[]) {
         int ms = Integer.MIN_VALUE;
         int cs = 0;
@@ -14,7 +15,7 @@ public class Kadane {
     }
 
     public static void main(String args[]) {
-        int numbers[] = { -1, -2, -3, -4 };
+        int numbers[] = { -1, -2, -4, -4 };
         kadanes(numbers);
 
     }
