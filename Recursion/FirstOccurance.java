@@ -2,6 +2,7 @@ package Recursion;
 
 public class FirstOccurance {
     public static int firstOccurance(int arr[], int key, int i) {
+        //base case
         if (i == arr.length - 1) {
             return -1;
 
