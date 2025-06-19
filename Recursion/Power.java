@@ -28,8 +28,8 @@ public class Power {
     public static void main(String args[]) {
         int x = 2;
         int n = 10;
-        System.out.println(power(x, n));
-        System.out.println(optimzedpower(x, n));
+        System.out.println("Method one: " + power(x, n));
+        System.out.println("Method second: "+optimzedpower(x, n));
 
     }
 

@@ -19,7 +19,7 @@ public class QuickSort {
     }
 
     public static int partition(int arr[], int si, int ei) {
-        int pivot = arr[ei];
+        int pivot = arr[ei]; // pivot element cab be any any number (random, medium,first or last)
         int i = si - 1; // to make place for element smaller than pivot
 
         for (int j = si; j < ei; j++) {
@@ -41,8 +41,9 @@ public class QuickSort {
 
     public static void main(String args[]) {
         int arr[] = { 6, 3, 9, 5, 2, 8, -2 };
-        quickSort(arr, 0, arr.length - 1);
-        printArr(arr);
+        int arr1[] ={6,3,9,8,2,5};
+        quickSort(arr1, 0, arr1.length - 1);
+        printArr(arr1);
     }
 
 }

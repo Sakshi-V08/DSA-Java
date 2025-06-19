@@ -1,5 +1,5 @@
 package Recursion;
-
+// The time complexity of this algorithm is O(log n), which is the same as binary search.
 public class SearchRotated {
     public static void printArr(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
@@ -44,7 +44,7 @@ public class SearchRotated {
 
     public static void main(String args[]) {
         int arr[] = { 4,5,6,7,0,1,2 };
-        int target =0;
+        int target = 1;
         int tarIdx = search(arr,target, 0, arr.length - 1);
         System.out.print(tarIdx);
     }
