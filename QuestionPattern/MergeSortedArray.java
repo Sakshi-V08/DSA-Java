@@ -1,5 +1,6 @@
 package QuestionPattern;
-// tc O(N+M)
+// tc O(N+M) //sc O(1) both array are sorted 
+//Merge 2 sorted array without extra space
 public class MergeSortedArray {
     public static void main(String args[]) {
         int m = 3, n = 3;
