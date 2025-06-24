@@ -1,7 +1,7 @@
 package QuestionPattern;
 
 //you are given the heads of two sorted linked lists list1 and list2 Merge the two lists in a one sorted list. The list should be made by splicing together the nodes of the first two listd. Return the head of the merged linked list.
-
+//used in linkedlist
 
 public class Merge2SortedList {
     public static class Node {
